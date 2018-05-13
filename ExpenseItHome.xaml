@@ -34,11 +34,9 @@
         <Border Grid.Column="1" Grid.Row="1" Style="{StaticResource listHeaderStyle}">
             <Label Style="{StaticResource listHeaderTextStyle}">Names</Label>
         </Border>
-        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2">
-            <ListBoxItem>Mike</ListBoxItem>
-            <ListBoxItem>Lisa</ListBoxItem>
-            <ListBoxItem>John</ListBoxItem>
-            <ListBoxItem>Mary</ListBoxItem>
+        <ListBox Name="peopleListBox" Grid.Column="1" Grid.Row="2"
+            ItemsSource="{Binding Source={StaticResource ExpenseDataSource},XPath=Person}"
+            ItemTemplate="{StaticResource nameItemTemplate}">
         </ListBox>
 
         <!-- View report button -->
